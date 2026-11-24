@@ -48,6 +48,7 @@ HolyArrs drops one newline at the end of the file. If the file is missing, HolyA
 | `HOLYARRS_ALLOW_DESKTOP_FOLDER` | Start with `/config` in a Docker Desktop shared folder on a Mac, after you check file locks work there. HolyArrs warns on every start. | off | `1` |
 | `HOLYARRS_ALLOW_FUSE_FOLDER` | Start with `/config` on a FUSE folder that is refused, such as mergerfs. The database can be damaged there, so HolyArrs warns on every start. An Unraid user share under `/mnt/user` needs no setting: HolyArrs starts there in a slower, safer database mode with a warning. NFS and SMB stay refused. Status shows a warning while it is set. | off | `1` |
 | `HOLYARRS_READONLY_DOWNLOADERS` | Downloaders HolyArrs must never change, by id or address, comma separated. | none | `3,http://qbit:8080` |
+| `HOLYARRS_TRACKER_URL_PREFIXES` | Extra magnet tracker URL prefixes to keep (beyond http/https/udp), comma separated. Unset and empty mean none. | none | `iptv://` |
 | `HOLYARRS_HEALTH_URL` | Address the container health check calls. | `http://127.0.0.1:` and the port from `HOLYARRS_ADDR` or `HOLYARRS_PORT`, else `6262` | `http://127.0.0.1:6262/holyarrs` |
 
 On/off variables accept `1`, `true`, `yes` or `on`.
